@@ -36,7 +36,7 @@ app.post("/course/socra", (req, res) => {
       res.send({ error: "you are already checked in for this group" });
     } else {
       studentDB.save({ group, slogan });
-      res.send({ status: "you are new checked in!" });
+      res.send({ status: "you are now checked in. Congrats!" });
     }
   } else {
     res.status(400);

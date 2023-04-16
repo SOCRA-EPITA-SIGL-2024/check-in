@@ -4,7 +4,7 @@ COPY . /code
 WORKDIR /code
 RUN npm install
 
-EXPOSE 300
+EXPOSE 3000
 
 CMD npm run dev
 
