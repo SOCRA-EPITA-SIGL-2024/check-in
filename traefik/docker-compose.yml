@@ -2,17 +2,14 @@ version: '3'
 
 services:
   check-in:
-    image: florentfauchille/check-in:v1
+    image: florentfauchille/check-in:v2
     container_name: check-in
     labels:
       traefik.docker.network: "web"
       traefik.enable: "true"
-      traefik.http.routers.check-in.rule: "Host(`check-in.group26.socra-sigl.fr`)"
-      traefik.http.routers.check-in.rule: "Host(`check-in.group26.socra-sigl.fr`)"
+      traefik.http.routers.check-in.rule: "Host(`check-in.groupXX.socra-sigl.fr`)"
       traefik.http.routers.check-in.tls: "true"
       traefik.http.routers.check-in.tls.certresolver: "myresolver"
-    ports:
-      - 3000
     networks:
       - web
 networks:
